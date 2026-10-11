@@ -1,66 +1,64 @@
-============================================================
 EXECUTION GUIDE
+
 Movie Ticket Booking System
-============================================================
 
 1. Open MySQL Workbench and connect to your MySQL server.
 
-2. Create the database and project tables.
+2. Create and populate the database by opening and executing the file named `movie_booking_db.sql`.
 
-   Open and execute:
+3. Select the database.
 
-   movie_booking_db.sql
+```sql
+USE movie_booking_db;
+```
 
-3. Select the database:
+4. Verify the database tables.
 
-   USE movie_booking_db;
+```sql
+SHOW TABLES;
+```
 
-4. Verify the database tables:
+The tables are customers, movies, theatres, and bookings.
 
-   SHOW TABLES;
+5. Verify the records in each table.
 
-   Expected tables:
+```sql
+SELECT * FROM customers;
 
-   customers
-   movies
-   theatres
-   bookings
+SELECT * FROM movies;
 
-5. Verify the records:
+SELECT * FROM theatres;
 
-   SELECT * FROM customers;
-   SELECT * FROM movies;
-   SELECT * FROM theatres;
-   SELECT * FROM bookings;
+SELECT * FROM bookings;
+```
 
-6. Execute the SQL query files in the following order:
+6. Execute the SQL query files in the following order.
 
-   Simple_Queries.sql
-   Medium_Queries.sql
-   Hard_Queries.sql
+Simple_Queries.sql
 
-7. Review the output grid in MySQL Workbench after executing each query.
+Medium_Queries.sql
 
-============================================================
-IMPORTANT
-============================================================
+Hard_Queries.sql
 
-Database:
-movie_booking_db
+7. View the output in MySQL Workbench after executing each query.
 
-Tables:
-customers
-movies
-theatres
-bookings
+IMPORTANT INFORMATION
 
-Relationships:
+Database Name: movie_booking_db
 
-bookings.customer_id → customers.customer_id
+Tables: customers, movies, theatres, bookings
 
-bookings.movie_id → movies.movie_id
+Relationships
 
-bookings.theatre_id → theatres.theatre_id
+bookings.customer_id references customers.customer_id
+
+bookings.movie_id references movies.movie_id
+
+bookings.theatre_id references theatres.theatre_id
+
+NOTE
+
+Execute movie_booking_db.sql first to create and populate the database. After that, execute the query files to analyze the data.
 
 ============================================================
 NOTE
