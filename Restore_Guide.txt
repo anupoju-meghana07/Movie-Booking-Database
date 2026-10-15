@@ -35,6 +35,16 @@ SELECT COUNT(*) AS total_theatres FROM theatres;
 
 SELECT COUNT(*) AS total_bookings FROM bookings;
 
+
+Expected dataset counts:
+
+    customers : 20000
+    movies    :   500
+    theatres  :   200
+    bookings  : 20000
+
+    Total     : 40700
+
 6. Run the query files in order:
 
 Simple_queries.txt
