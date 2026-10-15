@@ -1,0 +1,81 @@
+EXECUTION GUIDE:
+
+Movie Ticket Booking System
+============================================================
+
+1. Open MySQL Workbench or MySQL CLI.
+
+2. Create the database:
+
+CREATE DATABASE IF NOT EXISTS movie_booking_db;
+
+3. Restore the database using the file movie_booking_db-1.sql.
+
+From Command Prompt, run:
+
+mysql -u root -p movie_booking_db < movie_booking_db-1.sql
+
+On Windows, if mysql is not recognized, run:
+
+"C:\Program Files\MySQL\MySQL Server 8.0\bin\mysql.exe" -u root -p movie_booking_db < movie_booking_db-1.sql
+
+4. Verify the database:
+
+USE movie_booking_db;
+
+SHOW TABLES;
+
+5. Verify the records:
+
+SELECT COUNT(*) AS total_customers FROM customers;
+
+SELECT COUNT(*) AS total_movies FROM movies;
+
+SELECT COUNT(*) AS total_theatres FROM theatres;
+
+SELECT COUNT(*) AS total_bookings FROM bookings;
+
+6. Run the query files in order:
+
+Simple_queries.txt
+
+Medium_queries.txt
+
+Hard_queries.txt
+
+7. Recommended learning order:
+
+Simple
+   ↓
+Medium
+   ↓
+Hard
+
+============================================================
+IMPORTANT
+============================================================
+
+Database:
+movie_booking_db
+
+Tables:
+customers
+movies
+theatres
+bookings
+
+Relationships:
+
+bookings.customer_id → customers.customer_id
+
+bookings.movie_id → movies.movie_id
+
+bookings.theatre_id → theatres.theatre_id
+
+The file movie_booking_db-1.sql is the recommended method for restoring the database.
+
+Database_Creation_Insertion.txt may be used as an alternative.
+
+============================================================
+END OF GUIDE
+============================================================
